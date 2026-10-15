@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b55">
+<title>Let's Talk English | Interactive Practice Test</title>
+<style>
+:root{--navy:#102b55;--blue:#2563eb;--sky:#eaf3ff;--ink:#18243a;--muted:#667085;--line:#e6ebf2;--gold:#ffd166;--green:#16845b}
+*{box-sizing:border-box}body{margin:0;background:#f5f8fc;color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}a{color:inherit}.wrap{width:min(1050px,92%);margin:auto}
+.topbar{background:#0c2041;color:#fff;padding:10px 0;text-align:center;font-size:12px;letter-spacing:.5px}
+header{background:linear-gradient(135deg,#102b55,#1d4d91);color:#fff;padding:34px 0 43px;position:relative;overflow:hidden}header:after{content:"";position:absolute;width:310px;height:310px;border:45px solid #ffffff12;border-radius:50%;right:-100px;top:-130px}
+.brand{font-size:14px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#d9e8ff;position:relative;z-index:1}
+.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:25px;align-items:center;position:relative;z-index:1}
+.pill{display:inline-block;background:#ffffff18;border:1px solid #ffffff35;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:800;letter-spacing:.6px}
+h1{font-size:clamp(30px,5vw,49px);line-height:1.12;margin:14px 0;letter-spacing:-1px}header p{color:#e3edff;max-width:620px;margin:0 0 21px;font-size:15px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 17px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px;border:0;cursor:pointer}.btn-gold{background:var(--gold);color:#142748}.btn-wa{background:var(--green);color:#fff;width:100%}
+.hero-art{background:#ffffff12;border:1px solid #ffffff25;border-radius:26px;padding:23px;text-align:center;min-height:185px;display:flex;flex-direction:column;justify-content:center}.hero-art .emoji{font-size:55px}.hero-art strong{font-size:18px}.hero-art span{font-size:13px;color:#dce8ff}
+main{padding:32px 0 48px}.section-head{text-align:center;margin:0 auto 23px;max-width:720px}h2{font-size:clamp(24px,4vw,31px);line-height:1.2;color:var(--navy);margin:0 0 8px;letter-spacing:-.5px}.muted{color:var(--muted);font-size:14px;margin:0}
+.included{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:30px;box-shadow:0 6px 22px #17365d08}.included h3{margin:0 0 15px;color:var(--navy);font-size:18px}.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.feature{background:#f7faff;border:1px solid #edf2fa;border-radius:13px;padding:13px;font-size:14px;font-weight:700}.feature .emoji{font-size:21px;display:block;margin-bottom:4px}
+.bundle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.bundle{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 26px #17365d0a;display:flex;flex-direction:column}.bundle-head{padding:22px 20px 18px;background:linear-gradient(135deg,#edf5ff,#f8fbff);border-bottom:1px solid var(--line)}.bundle-head .flag{font-size:12px;font-weight:900;letter-spacing:1px;color:#2856a0;text-transform:uppercase}.bundle h3{font-size:22px;color:var(--navy);margin:8px 0 3px;line-height:1.25}.bundle .level-name{font-size:13px;color:var(--muted)}.bundle-body{padding:19px 20px 21px;display:flex;flex-direction:column;flex:1}.price{font-size:31px;font-weight:900;color:var(--navy);letter-spacing:-.6px;margin:0 0 14px}.price small{font-size:13px;font-weight:600;color:var(--muted);letter-spacing:0}.bundle-body p{font-size:13px;color:#56647a;margin:0 0 17px}.bundle-body .btn{margin-top:auto}.tag{display:inline-block;align-self:flex-start;background:#e9f7ef;color:#18704d;padding:5px 9px;border-radius:999px;font-size:11px;font-weight:800;margin-bottom:12px}
+.details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:28px}.details h3{color:var(--navy);font-size:19px;margin:0 0 14px}.details-list{display:grid;grid-template-columns:1fr 1fr;gap:11px 18px}.detail{font-size:14px;color:#48566b}.detail b{color:var(--ink)}.detail:before{content:"✓";font-weight:900;color:var(--green);margin-right:9px}
+.notice{margin-top:22px;padding:22px;border-radius:18px;background:#eaf3ff;display:flex;justify-content:space-between;gap:18px;align-items:center}.notice h3{margin:0 0 4px;color:var(--navy);font-size:18px}.notice p{margin:0;color:#53657e;font-size:13px}.notice .btn{white-space:nowrap;background:var(--navy);color:#fff}
+footer{background:#0c2041;color:#d9e5f8;padding:27px 0;text-align:center;font-size:12px}footer strong{display:block;font-size:15px;color:#fff;margin-bottom:5px;letter-spacing:.5px}.slogan{color:#9fb3d2;margin-top:8px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero-art{min-height:125px;flex-direction:row;gap:12px;align-items:center}.hero-art .emoji{font-size:43px}.feature-grid{grid-template-columns:repeat(2,1fr)}.bundle-grid{grid-template-columns:1fr}.bundle-head{padding:19px 20px 15px}.notice{align-items:stretch;flex-direction:column}.notice .btn{width:100%}}
+@media(max-width:430px){header{padding:26px 0 32px}.feature-grid{grid-template-columns:1fr 1fr}.feature{font-size:12px;padding:10px}.included,.details{padding:16px}.details-list{grid-template-columns:1fr}.btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="topbar">🇬🇧 LET'S TALK ENGLISH • INTERACTIVE PRACTICE TEST</div>
+<header><div class="wrap">
+  <div class="brand">Let's Talk English</div>
+  <div class="hero">
+    <div>
+      <span class="pill">DIGITAL ENGLISH LEARNING MATERIALS</span>
+      <h1>Belajar Bahasa Inggris dengan latihan yang interaktif.</h1>
+      <p>Kenalan dengan Let’s Talk English Interactive Practice Test! Pilih bundle sesuai levelmu dan mulai latihan secara mandiri.</p>
+      <a class="btn btn-gold" href="#bundle">✨ Pilih Bundle Kamu ↓</a>
+    </div>
+    <div class="hero-art"><div class="emoji">📚 🎧 ✍️</div><div><strong>Practice • Learn • Improve</strong><br><span>Belajar sesuai level, kapan pun kamu punya waktu.</span></div></div>
+  </div>
+</div></header>
+<main class="wrap">
+  <section class="section-head">
+    <h2>APA SAJA YANG KAMU DAPATKAN?</h2>
+    <p class="muted">Satu bundle berisi berbagai jenis latihan untuk mendukung proses belajarmu.</p>
+  </section>
+  <section class="included">
+    <div class="feature-grid">
+      <div class="feature"><span class="emoji">🎧</span>Listening Practice</div>
+      <div class="feature"><span class="emoji">📖</span>Reading Practice</div>
+      <div class="feature"><span class="emoji">✍️</span>Writing Practice</div>
+      <div class="feature"><span class="emoji">📝</span>Grammar & Vocabulary</div>
+      <div class="feature"><span class="emoji">🎯</span>Interactive Final Test</div>
+      <div class="feature"><span class="emoji">📒</span>Bonus Everyday English Expressions</div>
+    </div>
+  </section>
+  <section class="section-head" id="bundle">
+    <h2>💰 PILIH BUNDLE KAMU</h2>
+    <p class="muted">Pilih level yang sesuai dengan kemampuan bahasa Inggrismu.</p>
+  </section>
+  <section class="bundle-grid">
+    <article class="bundle">
+      <div class="bundle-head"><div class="flag">🇬🇧 Bundle Beginner</div><h3>A1 + A2</h3><div class="level-name">Beginner</div></div>
+      <div class="bundle-body"><span class="tag">Untuk pemula</span><div class="price">Rp15.000</div><p>Mulai membangun dasar bahasa Inggris melalui latihan Listening, Reading, Writing, Grammar & Vocabulary, Final Test, serta bonus Everyday English Expressions.</p><a class="btn btn-wa buy" data-bundle="A1 + A2 — Beginner" href="#">💬 Pesan Bundle Ini</a></div>
+    </article>
+    <article class="bundle">
+      <div class="bundle-head"><div class="flag">🇬🇧 Bundle Intermediate</div><h3>B1 + B2</h3><div class="level-name">Intermediate</div></div>
+      <div class="bundle-body"><span class="tag">Untuk level menengah</span><div class="price">Rp18.000</div><p>Bundle untuk pelajar level menengah yang ingin melatih keterampilan bahasa Inggris sesuai levelnya.</p><a class="btn btn-wa buy" data-bundle="B1 + B2 — Intermediate" href="#">💬 Pesan Bundle Ini</a></div>
+    </article>
+    <article class="bundle">
+      <div class="bundle-head"><div class="flag">🇬🇧 Bundle Advanced</div><h3>C1 + C2</h3><div class="level-name">Advanced</div></div>
+      <div class="bundle-body"><span class="tag">Untuk level mahir</span><div class="price">Rp20.000</div><p>Bundle untuk pelajar level mahir yang ingin berlatih dan mengembangkan keterampilan bahasa Inggris lebih lanjut.</p><a class="btn btn-wa buy" data-bundle="C1 + C2 — Advanced" href="#">💬 Pesan Bundle Ini</a></div>
+    </article>
+  </section>
+  <section class="details">
+    <h3>💻 PRAKTIS & FLEKSIBEL!</h3>
+    <div class="details-list">
+      <div class="detail">Produk berupa <b>file digital</b></div>
+      <div class="detail">Bisa digunakan melalui <b>HP yang kompatibel</b></div>
+      <div class="detail">Bisa diakses melalui <b>notebook dan laptop</b></div>
+      <div class="detail">Belajar kapan pun dan di mana pun sesuai waktu luangmu</div>
+      <div class="detail"><b>200+ soal latihan</b> untuk setiap bundle</div>
+      <div class="detail">Pemeriksaan jawaban otomatis pada bagian yang mendukung fitur tersebut</div>
+    </div>
+  </section>
+  <section class="notice">
+    <div><h3>Siap mulai belajar? 💙</h3><p>Produk dikirim dalam bentuk file digital setelah pemesanan dikonfirmasi. Klik tombol untuk menghubungi kami dan tanyakan cara pemesanan.</p></div>
+    <a class="btn" id="generalWhatsApp" href="#">💬 Hubungi via WhatsApp</a>
+  </section>
+  <p class="muted" style="text-align:center;margin-top:25px">✨ Belajar secara mandiri, berlatih sesuai level, dan tingkatkan keterampilan bahasa Inggrismu!</p>
+</main>
+<footer><div class="wrap"><strong>LET'S TALK ENGLISH</strong>Interactive Practice Test<div class="slogan">Practice • Learn • Improve 💙</div></div></footer>
+<script>
+/* GANTI nomor contoh di bawah dengan nomor WhatsApp Anda.
+   Gunakan kode negara 62 tanpa tanda +, spasi, atau angka 0 di awal.
+   Contoh 081234567890 menjadi 6281234567890. */
+const WHATSAPP_NUMBER = "6285297635377";
+function waLink(message){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);}
+document.querySelectorAll(".buy").forEach(button=>{
+  const bundle=button.dataset.bundle;
+  button.href=waLink("Halo! 👋 Saya tertarik dengan Let’s Talk English Interactive Practice Test. Saya ingin memesan bundle "+bundle+". Mohon informasi cara pemesanan dan konfirmasi produk. Terima kasih!");
+  button.target="_blank";button.rel="noopener";
+});
+const general=document.getElementById("generalWhatsApp");
+general.href=waLink("Halo! 👋 Saya tertarik dengan Let’s Talk English Interactive Practice Test. Mohon informasi bundle, isi produk, dan cara pemesanannya. Terima kasih!");
+general.target="_blank";general.rel="noopener";
+</script>
+</body>
+</html>
